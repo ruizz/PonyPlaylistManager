@@ -1,0 +1,53 @@
+﻿@model ponyproject.Models.Video
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Video</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.link)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.link)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dateAdded)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dateAdded)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.score)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.score)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.playlistId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.playlistId)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

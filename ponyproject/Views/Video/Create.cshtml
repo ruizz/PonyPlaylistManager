@@ -1,0 +1,63 @@
+﻿@model ponyproject.Models.Video
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Video</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.title)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.title)
+            @Html.ValidationMessageFor(model => model.title)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.link)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.link)
+            @Html.ValidationMessageFor(model => model.link)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dateAdded)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dateAdded)
+            @Html.ValidationMessageFor(model => model.dateAdded)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.score)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.score)
+            @Html.ValidationMessageFor(model => model.score)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.playlistId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.playlistId)
+            @Html.ValidationMessageFor(model => model.playlistId)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

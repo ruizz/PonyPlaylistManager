@@ -1,4 +1,5 @@
 using System.Web.Mvc;
+using ponyproject.Models;
 
 namespace ponyproject.Controllers
 {
@@ -6,10 +7,11 @@ namespace ponyproject.Controllers
     {
         //
         // GET: /Home/
+        private VideoContext db = new VideoContext();
 
         public ActionResult Index()
         {
-            return View();
+            return View(db.Videos);
         }
 
         public ActionResult About()

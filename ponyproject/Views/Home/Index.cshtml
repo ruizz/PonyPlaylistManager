@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<ponyproject.Models.Video>
+
+@{
     ViewBag.Title = "When Ponies Dream";
 }
 
@@ -43,14 +45,18 @@
                     <th width="50">Rank</th>
                     <th width="300">Title</th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td><a href="#">My Little Pony Friendship Is Magic : S2 E23 : PonyVille Confidential</a></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><a href="#">DerpyHooves.com - My Little Pony: Friendship is Magic Season 4 Promo</a></td>
-                </tr>
+                @{ 
+                    int rankCount = 1;
+                }
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.Raw(rankCount)</td>
+                        <td><a href="#">@Html.DisplayFor(modelItem => item.title)</a></td>
+                    </tr>
+                    
+                    rankCount++;
+                }
             </table>
         </div>
     </div>

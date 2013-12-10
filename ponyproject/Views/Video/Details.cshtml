@@ -1,0 +1,50 @@
+﻿@model ponyproject.Models.Video
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Video</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.link)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.link)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dateAdded)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dateAdded)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.score)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.score)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.playlistId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.playlistId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
