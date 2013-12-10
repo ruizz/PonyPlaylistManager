@@ -14,7 +14,6 @@ namespace ponyproject.App_Start
         {
             bundles.Add(new StyleBundle("~/css")
                             .Include("~/Content/bootstrap.css")
-                            .Include("~/Content/carousel.css")
                             .Include("~/Content/site.css")
                             .Include("~/Content/responsive-video.css")
                             .Include("~/Content/custom.css"));
